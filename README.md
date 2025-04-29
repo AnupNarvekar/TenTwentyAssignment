@@ -1,6 +1,6 @@
-# Contest Participation System
+# Contest Participation System (Backend focused)
 
-A full-stack application that allows users to participate in timed contests, answer questions, and compete on a leaderboard.
+An application that allows users to participate in timed contests, answer questions, compete on a leaderboard and win prizes!.
 
 ## Technologies Used
 
@@ -20,21 +20,9 @@ A full-stack application that allows users to participate in timed contests, ans
 
 The project is organized into a client-side React application and a server-side Node.js API.
 
-### Backend Structure
 
-- `/backend/models`: MongoDB schemas
-- `/backend/routes`: API endpoints
-- `/backend/middleware`: Authentication middleware
-- `/backend/utils`: Utility functions
 
-### Frontend Structure
-
-- `/src/components`: Reusable UI components
-- `/src/pages`: Page components
-- `/src/context`: React context providers
-- `/src/types`: TypeScript type definitions
-
-## Setup Instructions
+# Setup Instructions
 
 ### Prerequisites
 
@@ -73,19 +61,13 @@ The project is organized into a client-side React application and a server-side 
 
 - `POST /api/users/register` - Register a new user
 - `POST /api/users/login` - Login a user
-- `GET /api/users/:userId/history` - Get user contest history (requires authentication)
+- `GET /api/users/contest-history` - Get user's contest history (requires authentication)
+- `POST /api/users/buy-vip` - Get access to VIP contests (requires authentication)
 
 ### Contest API
 
 - `GET /api/contests` - Get all contests
 - `GET /api/contests/:contestId` - Get contest details
+- `POST /api/contests/:contestId/participate` - Participate for an upcoming contest (requires authentication)
 - `POST /api/contests/:contestId/submit` - Submit contest answers (requires authentication)
 - `GET /api/contests/:contestId/leaderboard` - Get contest leaderboard
-
-## Database Schema
-
-- User: userId, name, email, password, timestamps
-- Contest: contestId, name, description, startTime, endTime, questions, timestamps
-- Question: questionId, text, options, correctAnswer, score, timestamps
-- Submission: submissionId, userId, contestId, answers, score, submittedAt, timestamps
-- Leaderboard: contestId, userId, score, rank, timestamps
