@@ -71,3 +71,6 @@ The project is organized into a client-side React application and a server-side 
 - `POST /api/contests/:contestId/participate` - Participate for an upcoming contest (requires authentication)
 - `POST /api/contests/:contestId/submit` - Submit contest answers (requires authentication)
 - `GET /api/contests/:contestId/leaderboard` - Get contest leaderboard
+
+### Postman collection for testng the APIs
+https://documenter.getpostman.com/view/18716978/2sB2j3ABSP
