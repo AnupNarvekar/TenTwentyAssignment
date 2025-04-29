@@ -49,11 +49,18 @@ The project is organized into a client-side React application and a server-side 
    ```
    npm run server
    ```
-2. In a separate terminal, start the frontend development server:
+
+2. Seed data:
+   ```
+   node backend/seeders/seedData.js
+   ```
+
+3. In a separate terminal, start the frontend development server:
    ```
    npm run dev
    ```
-3. Access the application at `http://localhost:5173`
+4. Access the application at `http://localhost:5173`
+
 
 ## API Endpoints
 
